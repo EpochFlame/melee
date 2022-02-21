@@ -90,10 +90,7 @@ ftMapping ftMapping_list[33] = {   //////ftMapping_list
 
 ////.bss
 StaticPlayer player_slots[6]; 
-struct {  /// TODO what is with this thing?
-    struct _HSD_ObjAllocData hsd_ObjAllocData;
-    u32 align;
-} lbl_804587E0;
+struct _HSD_ObjAllocDataInit lbl_804587E0; // maybe fix the typedef in objalloc.h
 
 extern s32 lbl_804D6470;
 

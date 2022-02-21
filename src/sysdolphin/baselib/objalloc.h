@@ -31,6 +31,11 @@ typedef struct _HSD_ObjAllocData {
     struct _HSD_ObjAllocData* next;
 } HSD_ObjAllocData;
 
+typedef struct _HSD_ObjAllocDataInit {  /// TODO what is with this thing?
+    struct _HSD_ObjAllocData hsd_ObjAllocData;
+    u32 filler;
+} HSD_ObjAllocDataInit;
+
 void HSD_ObjSetHeap(u32 size, void* ptr);
 s32	HSD_ObjAllocAddFree(HSD_ObjAllocData* data, u32 num);
 void* HSD_ObjAlloc(HSD_ObjAllocData* data);

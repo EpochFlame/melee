@@ -14,11 +14,11 @@ typedef struct _HSD_ZList {
   struct _HSD_ZList *next;
 } HSD_ZList;
 
-HSD_ObjAllocData zlist_alloc_data;
+HSD_ObjAllocDataInit zlist_alloc_data;
 
 void HSD_ZListInitAllocData(void)
 {
-  HSD_ObjAllocInit(&zlist_alloc_data, sizeof(HSD_ZList), 4);
+  HSD_ObjAllocInit(&zlist_alloc_data.hsd_ObjAllocData, sizeof(HSD_ZList), 4);
 }
 
 void HSD_StateInitDirect(int vtxfmt, u32 param_2)

@@ -4,7 +4,7 @@
 
 #include "sysdolphin/baselib/jobj.h"
 
-HSD_ObjAllocData aobj_alloc_data;
+HSD_ObjAllocDataInit aobj_alloc_data;
 
 static char lbl_804D5D08[7] = "aobj.c\0";
 static char lbl_804D5D10[4] = "new\0";
@@ -24,12 +24,12 @@ static s32 lbl_804D7630;
 
 void HSD_AObjInitAllocData(void)
 {
-    HSD_ObjAllocInit(&aobj_alloc_data, sizeof(HSD_AObj), 4);
+    HSD_ObjAllocInit(&aobj_alloc_data.hsd_ObjAllocData, sizeof(HSD_AObj), 4);
 }
 
 HSD_ObjAllocData* HSD_AObjGetAllocData(void)
 {
-    return &aobj_alloc_data;
+    return &aobj_alloc_data.hsd_ObjAllocData;
 }
 
 u32 HSD_AObjGetFlags(HSD_AObj* aobj)
@@ -279,7 +279,7 @@ void HSD_AObjRemove(HSD_AObj* aobj)
 
 HSD_AObj* HSD_AObjAlloc(void) 
 {
-    HSD_AObj* aobj = (HSD_AObj*)HSD_ObjAlloc(&aobj_alloc_data);
+    HSD_AObj* aobj = (HSD_AObj*)HSD_ObjAlloc(&aobj_alloc_data.hsd_ObjAllocData);
     if (aobj == NULL)
     {
         __assert(lbl_804D5D08, 489, lbl_804D5D10);
@@ -295,7 +295,7 @@ void HSD_AObjFree(HSD_AObj* aobj)
     if (!aobj)
         return;
     
-    HSD_ObjFree(&aobj_alloc_data, (HSD_ObjAllocLink*)aobj);
+    HSD_ObjFree(&aobj_alloc_data.hsd_ObjAllocData, (HSD_ObjAllocLink*)aobj);
 }
 
 void callbackForeachFunc(struct _HSD_AObj *aobj, void *obj, HSD_Type type, void (*func)(), AObj_Arg_Type arg_type, callbackArg *arg)

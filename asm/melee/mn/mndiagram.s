@@ -5785,6 +5785,9 @@ lbl_804A0814:
 .global lbl_804A0824
 lbl_804A0824:
 	.skip 0x10
+.global lbl_804A0834 # belongs with mndiagram2.s (is here for r40 reasons)
+lbl_804A0834:
+	.skip 0x10
 
 .section .data
     .balign 8

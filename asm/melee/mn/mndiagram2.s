@@ -2480,12 +2480,6 @@ lbl_80245B90:
 /* 80245B9C 0024277C  7C 08 03 A6 */	mtlr r0
 /* 80245BA0 00242780  4E 80 00 20 */	blr 
 
-
-.section .bss, "wa"
-.global lbl_804A0834
-lbl_804A0834:
-	.skip 0x10
-
 .section .data
     .balign 8
 .global lbl_803EEAD0
