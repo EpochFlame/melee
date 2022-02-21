@@ -5763,32 +5763,6 @@ lbl_802439E8:
 /* 80243A34 00240614  7C 08 03 A6 */	mtlr r0
 /* 80243A38 00240618  4E 80 00 20 */	blr 
 
-.section .bss, "wa"
-.global lbl_804A0750
-lbl_804A0750:
-	.skip 0x1C
-.global lbl_804A076C
-lbl_804A076C:
-	.skip 0x78
-.global lbl_804A07E4
-lbl_804A07E4:
-	.skip 0x10
-.global lbl_804A07F4
-lbl_804A07F4:
-	.skip 0x10
-.global lbl_804A0804
-lbl_804A0804:
-	.skip 0x10
-.global lbl_804A0814
-lbl_804A0814:
-	.skip 0x10
-.global lbl_804A0824
-lbl_804A0824:
-	.skip 0x10
-.global lbl_804A0834 # belongs with mndiagram2.s (is here for r40 reasons)
-lbl_804A0834:
-	.skip 0x10
-
 .section .data
     .balign 8
 .global lbl_803EE728
@@ -6033,6 +6007,34 @@ lbl_803EE774:
     .4byte 0x6A6F696E
     .4byte 0x74000000
     .4byte NULL
+
+
+.section .bss, "wa"
+.global lbl_804A0750
+lbl_804A0750:
+	.skip 0x1C
+.global lbl_804A076C
+lbl_804A076C:
+	.skip 0x78
+.global lbl_804A07E4
+lbl_804A07E4:
+	.skip 0x10
+.global lbl_804A07F4
+lbl_804A07F4:
+	.skip 0x10
+.global lbl_804A0804
+lbl_804A0804:
+	.skip 0x10
+.global lbl_804A0814
+lbl_804A0814:
+	.skip 0x10
+.global lbl_804A0824
+lbl_804A0824:
+	.skip 0x10
+.global lbl_804A0834 # belongs with mndiagram2.s (is here for r40 reasons)
+lbl_804A0834:
+	.skip 0x10
+
 
 .section .sdata
     .balign 8
