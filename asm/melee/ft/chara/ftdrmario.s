@@ -457,7 +457,7 @@ func_80149AAC:
 
 
 .section .sdata2
-
+    .balign 8
 .global lbl_804D9DA8
 lbl_804D9DA8:
 	.4byte 0x40400000
